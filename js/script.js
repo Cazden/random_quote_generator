@@ -57,11 +57,31 @@ function getRandomQuote()
 }
 
 /***
- * `printQuote` function
+ * Function used to construct an HTML string with a random quote
 ***/
 function printQuote()
 {
-  // TODO Call getRandomQuote() and print to page
+  // Store random quote in a new variable
+  let randomQuote = getRandomQuote();
+
+  // Concacenate an HTML string with quote property values
+  let html = `<p class="quote">${randomQuote.quote}</p>
+              <p class="source">${randomQuote.source}`;
+
+  // Check if quote has citation value
+  if (randomQuote.citation !== "")
+  {
+    html += `<span class="citation">${randomQuote.citation}</span>`;
+  }
+
+  // Check if quote has year value
+  if (randomQuote.year !== "")
+  {
+    html += `<span class="year">${randomQuote.year}</span>`;
+  }
+  
+  html += `</p>`; // Append closing paragraph tag
+  document.getElementById('quote-box').innerHTML = html; // Assign quote to HTML
 }
 
 /***
