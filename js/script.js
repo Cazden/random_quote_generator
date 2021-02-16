@@ -15,7 +15,7 @@ const quotes = [
     quote: "It's the job that's never started as takes longest to finish...",
     source: "Samwise Gamgee",
     citation: "The Fellowship of the Ring",
-    year: "Third Age, 3018"
+    year: "Third Age 3018"
   },
   {
     quote: "Do... or do not. There is no try.",
@@ -45,11 +45,15 @@ const quotes = [
 
 
 /***
- * `getRandomQuote` function
+ * Function used to get a random quote object from the quotes array
 ***/
 function getRandomQuote()
 {
-  // TODO
+  // Get a random index based on the number of quotes in the quotes array
+  let quoteIndex = Math.floor(Math.random() * quotes.length);
+
+  // Return random quote from quotes array
+  return quotes[quoteIndex];
 }
 
 /***
