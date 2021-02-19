@@ -16,20 +16,17 @@ const quotes = [
     source: "Samwise Gamgee",
     citation: "The Fellowship of the Ring",
     year: "Third Age 3018",
-    tag: ""
   },
   {
     quote: "Do... or do not. There is no try.",
     source: "Yoda",
     citation: "The Empire Strikes Back",
     year: "4 ABY",
-    tag: ""
   },
   {
     quote: "I don't have time to explain what I don't have time to understand.",
     source: "Cayde-6",
     citation: "Destiny",
-    year: "",
     tag: "#videogames"
   },
   {
@@ -37,13 +34,10 @@ const quotes = [
     source: "Albus Dumbledore",
     citation: "The Sorcerer's Stone",
     year: "1991",
-    tag: ""
   },
   {
     quote: "Have enough courage to trust love one more time and always one more time.",
     source: "Maya Angelou",
-    citation: "",
-    year: "",
     tag: "#inspirational"
   },
 ];
@@ -83,19 +77,19 @@ function printQuote()
               <p class="source">${randomQuote.source}`;
 
   // Check if quote has citation value
-  if (randomQuote.citation !== "")
+  if (randomQuote.citation)
   {
     html += `<span class="citation">${randomQuote.citation}</span>`;
   }
 
   // Check if quote has year value
-  if (randomQuote.year !== "")
+  if (randomQuote.year)
   {
     html += `<span class="year">${randomQuote.year}</span>`;
   }
 
   // Check if quote has year value
-  if (randomQuote.tag !== "")
+  if (randomQuote.tag)
   {
     html += `<span class="tag"> ${randomQuote.tag}</span>`;
   }
