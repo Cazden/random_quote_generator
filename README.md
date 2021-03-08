@@ -1,5 +1,4 @@
 # random_quote_generator
- Techdegree Project 1  
  *Displays a random quote when a button is activated.*
 
 **Features**
@@ -33,6 +32,3 @@
 
 **How to use?**  
 You can preview what the code does by downloading the project and opening index.html.
-
-**Credits**  
-https://www.TeamTreehouse.com and their Techdegree program (Full Stack JavaScript) for starter files and project.
