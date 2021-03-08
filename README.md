@@ -1,5 +1,4 @@
 # random_quote_generator
- Techdegree Project 1  
  *Displays a random quote when a button is activated.*
 
 **Features**
