@@ -10,7 +10,36 @@ project 1 - A Random Quote Generator
 /*** 
  * `quotes` array 
 ***/
-
+const quotes = [
+  {
+    quote: "Do... or do not. There is no try.",
+    source: "Yoda",
+    citation: "The Empire Strikes Back",
+    year: "4 ABY"
+  },
+  {
+    quote: "It's the job that's never started as takes longest to finish...",
+    source: "Samwise Gamgee",
+    citation: "The Fellowship of the Ring",
+    year: "Third Age 3018"
+  },
+  {
+    quote: "I don't have time to explain what I don't have time to understand.",
+    source: "Cayde-6",
+    citation: "Destiny",
+    tag: "#videogames"
+  },
+  {
+    quote: "It does not do well to dwell on dreams and forget to live.",
+    source: "J.K. Rowling",
+    citation: "Harry Potter and the Sorcerer's Stone",
+    year: "1991"
+  },
+  {
+    quote: 'The death of a dream is the day that you stop believing in the work it takes to get there.',
+    source: 'Chris Burkmenn'
+  }
+];
 
 
 /***
