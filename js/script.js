@@ -82,7 +82,7 @@ function printQuote() {
 
   // Concatenate an HTML string with 'randomQuote' prop values
   let html = `<p class="quote">"${randomQuote.quote}"</p>
-              <p class"source">${randomQuote.source}`;
+              <p class="source">${randomQuote.source}`;
 
   // Check if 'randomQuote' contains additional props and add html if true
   if(randomQuote.citation) {
@@ -100,13 +100,14 @@ function printQuote() {
    // Change background color of webpage
   document.body.style.background = getRandomHex();
 
-  // Print quote to webpage
    // Print quote to webpage
   document.getElementById('quote-box').innerHTML = html;
 }
 
-// Display initial quote on webpage load
-printQuote();
+// Automatically cycle quote every [x] amount of milliseconds
+setInterval(function() { printQuote(); }, 10000);
+
+printQuote(); // Display initial quote on webpage load
 
 
 /***
