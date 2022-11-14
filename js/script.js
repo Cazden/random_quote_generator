@@ -64,6 +64,17 @@ let lastRandomIndex;
 
 
 /***
+ * Return a random hexadecimal color value
+ * Math Credit: https://dev.to/akhil_001/generating-random-color-with-single-line-of-js-code-fhj
+***/
+function getRandomHex()
+{
+  // Return hexadecimal value between #000000 and #ffffff
+  return `#${Math.floor(Math.random()*16777215).toString(16)}`;
+}
+
+
+/***
  * Construct an HTML string with a random quote
 ***/
 function printQuote() {
@@ -83,11 +94,14 @@ function printQuote() {
   if(randomQuote.tag) {
     html += `<span class="tag"> ${randomQuote.tag}</span>`;
   }
+  
+  html += '</p>'; // Append closing html tag
 
-  // Append closing html tag
-  html += '</p>';
+   // Change background color of webpage
+  document.body.style.background = getRandomHex();
 
   // Print quote to webpage
+   // Print quote to webpage
   document.getElementById('quote-box').innerHTML = html;
 }
 
