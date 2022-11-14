@@ -43,7 +43,7 @@ const quotes = [
 
 
 /***
- * Function to get random quote obj from 'quotes' arr
+ * Get random quote obj from 'quotes' arr
  ***/
 function getRandomQuote()
 {
@@ -64,29 +64,34 @@ let lastRandomIndex;
 
 
 /***
- * `printQuote` function
+ * Construct an HTML string with a random quote
 ***/
 function printQuote() {
   const randomQuote = getRandomQuote();
+
+  // Concatenate an HTML string with 'randomQuote' prop values
   let html = `<p class="quote">"${randomQuote.quote}"</p>
               <p class"source">${randomQuote.source}`;
 
+  // Check if 'randomQuote' contains additional props and add html if true
   if(randomQuote.citation) {
     html += `<span class="citation">${randomQuote.citation}</span>`;
   }
-
   if(randomQuote.year) {
     html += `<span class="year">${randomQuote.year}</span>`;
   }
-
   if(randomQuote.tag) {
     html += `<span class="tag"> ${randomQuote.tag}</span>`;
   }
 
+  // Append closing html tag
   html += '</p>';
+
+  // Print quote to webpage
   document.getElementById('quote-box').innerHTML = html;
 }
 
+// Display initial quote on webpage load
 printQuote();
 
 
