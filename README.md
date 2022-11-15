@@ -9,25 +9,24 @@
 **Code Example**
 ```
  /***
- * Function used to get a random quote object from the quotes array
+ * Get random quote obj from 'quotes' arr
  ***/
  function getRandomQuote()
  {
-    let quoteIndex;
+    let randomIndex;
 
-    // Loop to make sure quotes don't repeat more than once in a row
+    // Loop so quotes don't repeat more than once in a row
     do
     {
-        // Get a random index based on the number of quotes in the quotes array
-        quoteIndex = Math.floor(Math.random() * quotes.length);
-    } while (quoteIndex === lastQuoteIndex)
+    // Get random index based on length of 'quotes' arr
+    randomIndex = Math.floor(Math.random() * quotes.length);
+    } while (randomIndex === lastRandomIndex)
 
-    lastQuoteIndex = quoteIndex;
+    lastRandomIndex = randomIndex;
 
-    // Return random quote from quotes array
-    return quotes[quoteIndex];
+    return quotes[randomIndex];
  }
- let lastQuoteIndex;
+ let lastRandomIndex;
 ```
 
 **How to use?**  
